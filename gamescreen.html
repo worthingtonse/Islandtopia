@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Game Screen</title>
+ <script type="text/javascript">
+  window.addEventListener('load', eventWindowLoaded, false);
+  function eventWindowLoaded(){
+   canvasApp();
+  }
+  function canvasApp(){
+	var theCanvas = document.getElementById("canvas");
+	if(!theCanvas || !theCanvas.getContext){
+	  return;
+	}//end if
+	var context = theCanvas.getContext("2d");
+	if(!context){
+	return;
+	}//end if not context
+	drawScreen();
+	
+	function drawScreen(){
+	context.fillStyle = '#ffaaaa';
+	context.fillRect(0,0,200,200);
+	context.fillStyle = '#000000';
+	context.font = '20px _sans';
+	context.textBaseline = 'top';
+	context.fillText("Canvas!", 0,0);
+	}//end draw screen
+  }//End function canvas app
+ </script>
+</head>
+<body>
+  <div style="position:absolute; top:50px; left:50px;">
+    <canvas id="canvas" width="200" height="200">
+	Your Browser does not support HTML5 Canvas.
+	</canvas>
+  </div>
+</body>
+</html>
