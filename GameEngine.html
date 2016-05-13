@@ -91,15 +91,20 @@ function switchGameState( newState ){
 	/*Displays the title screen text and waits for the space bar to be pressed before the game starts*/
 	function gameStateTitle(){
 	 if(titleStarted !=true){
-	  fillBackground();
 	   var photo = new Image();
-	   photo.src = "https://pbs.twimg.com/profile_banners/4917881232/1457725597/1500x500";
-	   context.drawImage(photo, 0,0,960,640,0,0,960,640);
+	   	photo.src = "https://pbs.twimg.com/profile_banners/4917881232/1457725597/1500x500";
+	   	context.drawImage(photo, 0, 0, 960, 640,0,0,960,640);
+
+
+
+	   
 	   setTextStyle();
-	   context.font = "45px Arial";
-	   context.fillText("The Hill People", 75, 390);
-	   context.font = "30px Arial";
+	   context.font = "45px Georgia"
+
+	   context.fillText("Hill People ", 75, 390);
+	   context.font = "28px, Georgia"
 	   context.fillText("Press Space To Play", 75, 440);
+	   
 	   titleStarted = true;
 	 }else{
 	  if(keyPressList[32]==true){
@@ -138,13 +143,14 @@ function switchGameState( newState ){
 	 /* Fads the player graphic onto the screen from 0 alphpa to 1. Once this is complete, level play will start. */ 
 	function gameStatePlayerStart(){
 	  fillBackground();
+	  
 	  renderScoreBoard();
-   
+   		showPlayer();
   // if( player.alpha < 1){
   //      player.alpha += .02;
 	//   context.globalAlpha = player.alpha;
     //     }else{
-		   switchGameState(GAME_STATE_PLAY_LEVEL);
+		   //switchGameState(GAME_STATE_PLAY_LEVEL);
     //   }//end if else	
 	  
 	   context.globalAlpha = 1;
@@ -209,6 +215,20 @@ function switchGameState( newState ){
 	 context.fillRect(xMin, yMin, xMax, yMax);
 	}// end fillBackground
 	
+
+	function showPlayer(){
+		var photo = new Image();
+		photo.src = "https://raw.githubusercontent.com/worthingtonse/Islandtopia/master/character.png";
+
+			context.drawImage(photo, 0,0,32,32,100,100,32,32);
+
+
+	}
+	//end showplayer
+
+
+
+
 	function setTextStyle(){
 	 context.fillStyle = '#ffffff';
 	 context.font = '15px _sans';
