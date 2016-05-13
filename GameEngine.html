@@ -94,13 +94,9 @@ function switchGameState( newState ){
 	   var photo = new Image();
 	   	photo.src = "https://pbs.twimg.com/profile_banners/4917881232/1457725597/1500x500";
 	   	context.drawImage(photo, 0, 0, 960, 640,0,0,960,640);
-
-
-
 	   
 	   setTextStyle();
 	   context.font = "45px Georgia"
-
 	   context.fillText("Hill People ", 75, 390);
 	   context.font = "28px, Georgia"
 	   context.fillText("Press Space To Play", 75, 440);
@@ -211,24 +207,17 @@ function switchGameState( newState ){
 	
 	function fillBackground(){
 	 //draw background and text
-	 context.fillStyle = '#000000';
-	 context.fillRect(xMin, yMin, xMax, yMax);
+	 var photo = new Image();
+	   	photo.src = "https://raw.githubusercontent.com/worthingtonse/Islandtopia/e0f0099459b926a31266f039168118205bb717c2/temperaryTile.jpg";
+	   	context.drawImage(photo, 0, 0, 960, 640,0,0,960,640);
 	}// end fillBackground
 	
-
 	function showPlayer(){
 		var photo = new Image();
 		photo.src = "https://raw.githubusercontent.com/worthingtonse/Islandtopia/master/character.png";
-
-			context.drawImage(photo, 0,0,32,32,xMax/2,yMax/2,32,32);
-
-
+			context.drawImage(photo, 0,0,32,32,100,100,32,32);
 	}
 	//end showplayer
-
-
-
-
 	function setTextStyle(){
 	 context.fillStyle = '#ffffff';
 	 context.font = '15px _sans';
