@@ -230,29 +230,33 @@ function switchGameState( newState ){
 	}//end renderScoreBoard
 	
 	
-	function checkKeys(){
+function checkKeys(){
 	
 	//Check keyboard
 	
 		//Left Arrow
 	  if( keyPressList[37]==true){
 	  //take actions
+	  xPlayer = xPlayer-3;
 	  }//end left arrow pressed
 		
 	
 	//Up arrow
 	  if( keyPressList[38]==true){
 	  //take actions
+	  yPlayer = yPlayer -3;
 	  }//end up arrow pressed
 		
     //Right arrow
 	  if( keyPressList[39]==true){
 	  //take actions
+	  xPlayer = xPlayer +3;
 	  }//end Right arrow pressed
 	  
 	//Down arrow
 	  if( keyPressList[40]==true){
 	  //take actions
+	  yPlayer = yPlayer +3;
 	  }//end down arrow pressed
 	}//end checkKeys
 	
