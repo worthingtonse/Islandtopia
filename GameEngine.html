@@ -38,7 +38,6 @@
 	//game environment
 	var score = 0;
 	var level = 0;
-
 	//Playfield
 	var xMin = 0;
 	var xMax = 400;
@@ -97,8 +96,10 @@ function switchGameState( newState ){
 	   photo.src = "https://pbs.twimg.com/profile_banners/4917881232/1457725597/1500x500";
 	   context.drawImage(photo, 0,0,960,640,0,0,960,640);
 	   setTextStyle();
-	   context.fillText("Islandtopia", 130, 70);
-	   context.fillText("Press Space To Play", 120, 140);
+	   context.font = "45px Arial";
+	   context.fillText("The Hill People", 75, 390);
+	   context.font = "30px Arial";
+	   context.fillText("Press Space To Play", 75, 440);
 	   titleStarted = true;
 	 }else{
 	  if(keyPressList[32]==true){
@@ -235,7 +236,6 @@ function switchGameState( newState ){
 	  //take actions
 	  }//end up arrow pressed
 		
-
     //Right arrow
 	  if( keyPressList[39]==true){
 	  //take actions
