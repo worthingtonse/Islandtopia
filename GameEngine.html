@@ -92,7 +92,10 @@ function switchGameState( newState ){
 	/*Displays the title screen text and waits for the space bar to be pressed before the game starts*/
 	function gameStateTitle(){
 	 if(titleStarted !=true){
-	   fillBackground();
+	  fillBackground();
+	   var photo = new Image();
+	   photo.src = "https://pbs.twimg.com/profile_banners/4917881232/1457725597/1500x500";
+	   context.drawImage(photo, 0,0,960,640,0,0,960,640);
 	   setTextStyle();
 	   context.fillText("Islandtopia", 130, 70);
 	   context.fillText("Press Space To Play", 120, 140);
@@ -352,7 +355,7 @@ function switchGameState( newState ){
 </head>
 <body>
   <div style="position:absolute; top:50px; left:50px;">
-    <canvas id="canvas" width="400" height="400">
+    <canvas id="canvas" width="960" height="640">
 	Your Browser does not support HTML5 Canvas.
 	</canvas>
   </div>
