@@ -96,9 +96,13 @@ function switchGameState( newState ){
 	   var photo = new Image();
 	   	photo.src = "https://pbs.twimg.com/profile_banners/4917881232/1457725597/1500x500";
 	   	context.drawImage(photo, 0, 0, 960, 640,0,0,960,640);
+
+
+
 	   
 	   setTextStyle();
 	   context.font = "45px Georgia"
+
 	   context.fillText("Hill People ", 75, 390);
 	   context.font = "28px, Georgia"
 	   context.fillText("Press Space To Play", 75, 440);
@@ -217,7 +221,10 @@ function switchGameState( newState ){
 	function showPlayer(){
 		var photo = new Image();
 		photo.src = "https://raw.githubusercontent.com/worthingtonse/Islandtopia/master/art/character/temp/guy1.png";
-			context.drawImage(photo, 0,0,32,32,xPlayer,100,yPlayer32);
+
+			context.drawImage(photo, 0,0,32,32,xPlayer,yPlayer,32,32);
+			checkKeys();
+
 	}
 	//end showplayer
 	function setTextStyle(){
